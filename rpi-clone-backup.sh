@@ -3,7 +3,7 @@ SRC_DEVICE=sda
 BKUP_DEVICE=mmcblk0
 
 # Check /boot
-BOOT_DEVICE=$(lsblk | grep "/boot" | awk -F ' ' '{print $1}' | awk -F '„Ÿ' '{print $2}')
+BOOT_DEVICE=$(lsblk | grep "/boot" | awk -F ' ' '{print $1}' | awk -F 'â”œâ”€' '{print $2}')
 
 if [ "$BOOT_DEVICE" != "${SRC_DEVICE}1" ]
 then
